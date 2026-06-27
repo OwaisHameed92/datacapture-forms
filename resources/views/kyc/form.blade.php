@@ -16,7 +16,8 @@
                 <img src="{{ asset('images/logo-switch.png') }}" alt="Switch&Save Business Services Ltd" class="h-9 sm:h-10 w-auto max-w-[58%] object-contain">
                 <span class="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full bg-emerald-50 px-2.5 py-1.5 text-[11px] sm:text-xs font-semibold text-emerald-700 ring-1 ring-inset ring-emerald-200">
                     <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                    SSL Secured &amp; Encrypted
+                    <span class="sm:hidden">Secure</span>
+                    <span class="hidden sm:inline">SSL Secured &amp; Encrypted</span>
                 </span>
             </div>
         </header>
