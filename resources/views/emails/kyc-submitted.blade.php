@@ -15,7 +15,7 @@
                     </tr>
                     <tr>
                         <td style="padding:28px 32px 8px 32px;">
-                            <p style="margin:0 0 4px 0;font-size:12px;font-weight:bold;color:#2563eb;letter-spacing:.04em;text-transform:uppercase;">Switch&amp;Save Business Services Ltd</p>
+                            <img src="{{ $message->embed(public_path('images/logo-switch.png')) }}" alt="Switch&amp;Save Business Services Ltd" width="190" style="display:block;width:190px;max-width:60%;height:auto;border:0;margin:0 0 16px 0;">
                             <h1 style="margin:0;font-size:20px;color:#0f172a;">New KYC submission received</h1>
                             <p style="margin:8px 0 0 0;font-size:14px;line-height:1.6;color:#64748b;">
                                 A customer has just submitted the identity &amp; business verification form. Details are summarised below.
