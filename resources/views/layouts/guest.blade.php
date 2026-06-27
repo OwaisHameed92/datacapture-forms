@@ -14,17 +14,24 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div class="mb-4">
+    <body class="font-sans text-slate-900 antialiased">
+        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-slate-50 px-4">
+            <div class="mb-6">
                 <a href="/" class="inline-flex items-center">
-                    <img src="{{ asset('images/logo-switch.svg') }}" alt="2SPOS" class="h-12 w-auto">
+                    <img src="{{ asset('images/logo-switch.png') }}" alt="Switch&Save Business Services Ltd" class="h-11 w-auto">
                 </a>
             </div>
 
-            <div class="w-full sm:max-w-md mt-2 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-                {{ $slot }}
+            <div class="w-full sm:max-w-md overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                <div class="h-1.5 bg-gradient-to-r from-blue-600 via-blue-500 to-emerald-500"></div>
+                <div class="px-7 py-7">
+                    {{ $slot }}
+                </div>
             </div>
+
+            <p class="mt-6 text-center text-[11px] text-slate-400">
+                &copy; {{ date('Y') }} Switch&amp;Save Business Services Ltd &middot; Authorised &amp; regulated by the FCA, FRN 1052230
+            </p>
         </div>
     </body>
 </html>

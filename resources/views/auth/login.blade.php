@@ -1,7 +1,8 @@
 <x-guest-layout>
-    <!-- <div class="mb-6 flex justify-center">
-        <img src="{{ asset('images/logo-switch.svg') }}" alt="2SPOS" class="h-12 w-auto">
-    </div> -->
+    <div class="mb-6">
+        <h1 class="text-lg font-semibold text-slate-900">Admin sign in</h1>
+        <p class="mt-1 text-xs text-slate-500">Access the KYC review dashboard.</p>
+    </div>
 
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -31,8 +32,8 @@
         <!-- Remember Me -->
         <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                <input id="remember_me" type="checkbox" class="rounded border-slate-300 text-blue-600 shadow-sm focus:ring-blue-500" name="remember">
+                <span class="ms-2 text-sm text-slate-600">{{ __('Remember me') }}</span>
             </label>
         </div>
 

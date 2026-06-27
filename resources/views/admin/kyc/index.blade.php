@@ -15,8 +15,8 @@
             <div class="bg-white shadow-sm sm:rounded-xl border border-gray-100">
                 <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between gap-4">
                     <form method="GET" class="flex-1 flex gap-2">
-                        <input type="text" name="search" value="{{ $search }}" placeholder="Search by name or email" class="flex-1 rounded-md border-gray-300 text-sm shadow-sm focus:border-amber-600 focus:ring-amber-600" />
-                        <button type="submit" class="inline-flex items-center px-4 py-2 bg-amber-700 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-amber-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-600">
+                        <input type="text" name="search" value="{{ $search }}" placeholder="Search by name or email" class="flex-1 rounded-lg border-slate-300 text-sm shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                        <button type="submit" class="inline-flex items-center px-5 py-2 bg-blue-600 border border-transparent rounded-lg font-semibold text-sm text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                             Search
                         </button>
                     </form>
@@ -48,13 +48,13 @@
                                 <td class="px-3 py-2 text-gray-700">{{ $customer->phone }}</td>
                                 <td class="px-3 py-2 text-gray-700">{{ $customer->email }}</td>
                                 <td class="px-3 py-2">
-                                    <span class="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-700">
+                                    <span class="inline-flex items-center rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-medium text-emerald-700 ring-1 ring-inset ring-emerald-100">
                                         {{ $customer->documents_count }} docs
                                     </span>
                                 </td>
                                 <td class="px-3 py-2 text-gray-500 text-xs">{{ $customer->created_at->format('Y-m-d H:i') }}</td>
                                 <td class="px-3 py-2 text-right">
-                                    <a href="{{ route('admin.kyc.customers.show', $customer) }}" class="inline-flex items-center text-xs font-semibold text-amber-700 hover:text-amber-900">View</a>
+                                    <a href="{{ route('admin.kyc.customers.show', $customer) }}" class="inline-flex items-center rounded-md bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700 hover:bg-blue-100">View</a>
                                 </td>
                             </tr>
                         @empty

@@ -7,7 +7,7 @@
                 </h2>
                 <p class="mt-1 text-sm text-gray-500">Full KYC profile and documents.</p>
             </div>
-            <a href="{{ route('admin.kyc.customers.index') }}" class="text-xs font-medium text-amber-700 hover:text-amber-900">&larr; Back to list</a>
+            <a href="{{ route('admin.kyc.customers.index') }}" class="text-xs font-medium text-blue-600 hover:text-blue-800">&larr; Back to list</a>
         </div>
     </x-slot>
 
@@ -150,7 +150,10 @@
                                     <td class="px-3 py-2 text-gray-700">{{ $document->original_filename }}</td>
                                     <td class="px-3 py-2 text-gray-500 text-xs">{{ number_format($document->size) }} bytes</td>
                                     <td class="px-3 py-2 text-right">
-                                        <a href="{{ route('admin.kyc.documents.download', [$customer, $document]) }}" class="inline-flex items-center text-xs font-semibold text-amber-700 hover:text-amber-900">Download</a>
+                                        <a href="{{ route('admin.kyc.documents.download', [$customer, $document]) }}" class="inline-flex items-center gap-1 rounded-md bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700 hover:bg-blue-100">
+                                            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                            Download
+                                        </a>
                                     </td>
                                 </tr>
                             @empty

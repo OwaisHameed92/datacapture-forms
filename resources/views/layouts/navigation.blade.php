@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}" class="inline-flex items-center">
-                        <img src="{{ asset('images/logo-switch.svg') }}" alt="2SPOS" class="h-9 w-auto" />
+                        <img src="{{ asset('images/logo-switch.png') }}" alt="Switch&Save Business Services Ltd" class="h-8 w-auto" />
                     </a>
                 </div>
 
