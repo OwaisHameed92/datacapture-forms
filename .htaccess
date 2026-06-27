@@ -1,4 +1,25 @@
+# NOTE: The most secure setup is to point this site's Document Root at the
+# `public/` folder (hPanel → Websites → Advanced) so the app source never sits
+# under the web root. The rules below are defense-in-depth for the fallback
+# setup where the whole project lives inside public_html and requests are
+# rewritten into public/.
+
+# --- Block direct access to sensitive files/dirs ---
 <IfModule mod_rewrite.c>
     RewriteEngine On
+
+    # Never serve dotfiles (.env, .git, etc.) or version-control/config files.
+    RewriteRule (^|/)\.(?!well-known/) - [F,L]
+    RewriteRule (^|/)(\.env|\.git|composer\.(json|lock)|package(-lock)?\.json|artisan|phpunit\.xml|vite\.config\.js)$ - [F,L]
+
+    # Block the framework's internal directories from the web entirely.
+    RewriteRule ^(app|bootstrap|config|database|resources|routes|storage|tests|vendor)(/|$) - [F,L]
+
+    # Everything else is served from the public/ directory.
     RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
+
+# Extra guard in case mod_rewrite is unavailable.
+<FilesMatch "^\.env|^\.env\..*|composer\.(json|lock)|package(-lock)?\.json|^\.git">
+    Require all denied
+</FilesMatch>
